@@ -1,0 +1,38 @@
+components.json  index.html  package.json  public  src  tsconfig.json  vite.config.ts
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$ pnpm run dev
+
+> @workspace/bei-yangu@0.0.0 dev /home/scorpion_wrist/hackathons/build_254/artifacts/bei-yangu
+> vite --config vite.config.ts --host 0.0.0.0
+
+sh: 1: vite: not found
+ ELIFECYCLE  Command failed.
+ WARN   Local package.json exists, but node_modules missing, did you mean to install?
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$ npm run dev
+
+> @workspace/bei-yangu@0.0.0 dev
+> vite --config vite.config.ts --host 0.0.0.0
+
+sh: 1: vite: not found
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$ npm install                               
+npm error code EUNSUPPORTEDPROTOCOL
+npm error Unsupported URL Type "catalog:": catalog:
+npm error A complete log of this run can be found in: /home/scorpion_wrist/.npm/_logs/2026-05-30T13_46_02_215Z-debug-0.log
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$ npm install                               
+npm error code EUNSUPPORTEDPROTOCOL
+npm error Unsupported URL Type "catalog:": catalog:
+npm error A complete log of this run can be found in: /home/scorpion_wrist/.npm/_logs/2026-05-30T13_46_45_256Z-debug-0.log
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$ ls
+components.json  index.html  package.json  public  src  tsconfig.json  vite.config.ts
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$      
