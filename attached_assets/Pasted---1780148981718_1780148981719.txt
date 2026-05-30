@@ -1,0 +1,24 @@
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$ pnpm run dev
+
+> @workspace/bei-yangu@0.0.0 dev /home/scorpion_wrist/hackathons/build_254/artifacts/bei-yangu
+> vite --config vite.config.ts --host 0.0.0.0
+
+failed to load config from /home/scorpion_wrist/hackathons/build_254/artifacts/bei-yangu/vite.config.ts
+error when starting dev server:
+Error: PORT environment variable is required but was not provided.
+    at file:///home/scorpion_wrist/hackathons/build_254/artifacts/bei-yangu/node_modules/.vite-temp/vite.config.ts.timestamp-1780148970006-d6f7883e8caaf8.mjs:10:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async loadConfigFromBundledFile (file:///home/scorpion_wrist/hackathons/build_254/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:35936:12)
+    at async bundleAndLoadConfigFile (file:///home/scorpion_wrist/hackathons/build_254/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:35824:17)
+    at async loadConfigFromFile (file:///home/scorpion_wrist/hackathons/build_254/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:35791:42)
+    at async resolveConfig (file:///home/scorpion_wrist/hackathons/build_254/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:35440:22)
+    at async _createServer (file:///home/scorpion_wrist/hackathons/build_254/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:25381:67)
+    at async CAC.<anonymous> (file:///home/scorpion_wrist/hackathons/build_254/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/cli.js:572:18)
+ ELIFECYCLE  Command failed with exit code 1.
+                                                                                                                               
+(base) ┌──(scorpion_wrist㉿kali)-[~/hackathons/build_254/artifacts/bei-yangu]
+└─$ 
+
