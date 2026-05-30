@@ -1,0 +1,32 @@
+so I want to do this in the best feasable way for it to work as much as possible , so lets do this : 
+
+i was thinking of  next js for frotend and fastapi for backend and a psql db , should I set up things first then give you the sekelton projects for you to write the code for this , I tink for fast api , you can just do the code already first since it doest not reaquere a setup think next js does right ? 
+
+so for fast api just wreite the code for the differnt parts then for next js I will create a next js project push it to github then share with you here so that you can write the code for the different parts okay . 
+
+so this is how I am thinking of all of this , so when I get into the app  so ths is how I see it all : 
+
+
+I get to the home page , there we can either have a list of the different hosptialss  , the itop insureances the support , whether they are govement or things like that any other info right ? 
+
+so when a user clicks on a hosptial they now see the different services offered at what price range  price okay . 
+then now when I search for a particular service they listed  based on the hospital prices and reanked from the one that matches your price best to the least match  okay > 
+
+also we should consider  custom rating on the different hospitals okay . so I hope you get the idea , I also need you to do a claude.md file to guide ai thourhg the project okay . 
+
+so lets start now please so I need you to give me a command like this to start the db with too 
+
+docker run -d \
+  --name sales_star_schema \
+  -e POSTGRES_DB=sales_star_schema_db \
+  -e POSTGRES_USER=sales_star_schema_adim \
+  -e POSTGRES_PASSWORD="1423Okello," \
+  -p 5500:5432 \
+  postgres:17
+
+
+suggest tehe name and everything so that you already have the db url whne bulding the fastapi backend okay . so do it in the best way possible okay . 
+
+done worry about auth that we will do onece we are done with everything okay . also ensure the ui si good and we have I have added the frontend repo now 
+
+so start hacking

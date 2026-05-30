@@ -1,45 +1,44 @@
-# [Project name]
+# Bei Yangu — Healthcare Price Comparison Platform
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A healthcare price transparency app for Kenya. Patients compare procedure costs across hospitals, filter by insurance, and use AI to search when they only know their symptoms.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- Frontend (Vite + React): runs via the `bei-yangu` workflow in Replit
+- Backend (FastAPI): run locally → `cd bei_yangu_backend && uvicorn app.main:app --reload`
+- DB: PostgreSQL via Docker (see `bei_yangu_backend/README.md` for the docker run command)
 
 ## Stack
 
+- **Frontend**: Vite + React 19, TypeScript, Tailwind CSS v4, Framer Motion, wouter, React Query
+- **Backend**: FastAPI 0.115, SQLAlchemy 2.0, PostgreSQL, Pydantic v2, Gemini AI
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/bei-yangu/` — Vite + React frontend
+- `bei_yangu_backend/` — FastAPI backend (Python)
+- `bei_yangu_backend/app/models/entities.py` — DB schema (SQLAlchemy models)
+- `bei_yangu_backend/app/seed_faker.py` — realistic Kenyan hospital seed data
+- `CLAUDE.md` — detailed AI guide for the project
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
-
-## Product
-
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Price ranges (min/max), not exact prices — avoids gaming while still useful
+- Gemini AI maps symptom queries to procedure slugs; falls back to keyword matching if no key
+- DB auto-seeds with real Kenyan hospitals on first startup
+- Slug-based URLs for hospitals and procedures
+- Frontend configured via `VITE_API_URL` env var (defaults to `http://localhost:8000`)
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- No Replit-native auth or DB — uses FastAPI + PostgreSQL running locally
+- Code must be portable / GitHub-pushable
+- UI should be state of the art — polished, animated, modern
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
-
-## Pointers
-
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Frontend calls backend at `VITE_API_URL` (default: `http://localhost:8000`)
+- Backend needs `GEMINI_API_KEY` set for AI search to work
+- DB runs via Docker on port 5501 (not the default 5432)
+- Backend auto-seeds on first startup; force re-seed with `SEED_FORCE=true`
